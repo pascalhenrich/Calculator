@@ -66,8 +66,6 @@ public class Calculator {
     public static void main(String[] args) {
         JFrame calculator = new JFrame("Calculator");
         calculator.setContentPane(new Calculator().calculatorPanel);
-        KeyLis listener = new KeyLis();
-        calculator.addKeyListener(listener);
         calculator.setSize(355, 220);
         calculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         calculator.setFocusable(true);
