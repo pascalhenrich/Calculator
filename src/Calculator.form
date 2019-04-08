@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Calculator">
+  <grid id="27dc6" binding="calculatorPanel" layout-manager="GridLayoutManager" row-count="5" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="8" left="8" bottom="8" right="8"/>
+    <constraints>
+      <xy x="20" y="20" width="362" height="190"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="add14" class="javax.swing.JButton" binding="button_7">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <text value="7"/>
+        </properties>
+      </component>
+      <component id="263fa" class="javax.swing.JButton" binding="button_8">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <focusable value="true"/>
+          <hideActionText value="false"/>
+          <selected value="false"/>
+          <text value="8"/>
+        </properties>
+      </component>
+      <component id="7ff89" class="javax.swing.JButton" binding="button_9">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <text value="9"/>
+        </properties>
+      </component>
+      <component id="71453" class="javax.swing.JButton" binding="button_multiply">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <text value="x"/>
+        </properties>
+      </component>
+      <component id="41d6f" class="javax.swing.JButton" binding="button_4">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <text value="4"/>
+        </properties>
+      </component>
+      <component id="a8711" class="javax.swing.JButton" binding="button_5">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <text value="5"/>
+        </properties>
+      </component>
+      <component id="e2b46" class="javax.swing.JButton" binding="button_6">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <text value="6"/>
+        </properties>
+      </component>
+      <component id="3fc07" class="javax.swing.JButton" binding="button_subtraction">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <text value="-"/>
+        </properties>
+      </component>
+      <component id="d0a77" class="javax.swing.JButton" binding="button_addition">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <text value="+"/>
+        </properties>
+      </component>
+      <component id="6b71" class="javax.swing.JButton" binding="button_3">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <text value="3"/>
+        </properties>
+      </component>
+      <component id="3522e" class="javax.swing.JButton" binding="button_2">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="7e13" class="javax.swing.JButton" binding="button_1">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <text value="1"/>
+        </properties>
+      </component>
+      <component id="50cd5" class="javax.swing.JButton" binding="button_0">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <text value="0"/>
+        </properties>
+      </component>
+      <component id="250ab" class="javax.swing.JButton" binding="button_point">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="true"/>
+          <doubleBuffered value="false"/>
+          <focusPainted value="false"/>
+          <text value="."/>
+        </properties>
+      </component>
+      <component id="db8ed" class="javax.swing.JButton" binding="button_result">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <text value="="/>
+        </properties>
+      </component>
+      <component id="33262" class="javax.swing.JButton" binding="button_division">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <text value="/"/>
+        </properties>
+      </component>
+      <component id="d3af8" class="javax.swing.JTextField" binding="textField">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="84e" class="javax.swing.JButton" binding="button_C">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <focusPainted value="false"/>
+          <text value="C"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
