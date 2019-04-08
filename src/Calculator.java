@@ -29,5 +29,6 @@ public class Calculator {
         calculator.setResizable(false);
         calculator.setVisible(true);
 
+
     }
 }
