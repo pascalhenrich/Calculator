@@ -23,7 +23,7 @@ public class Calculator {
     private JButton button_C;
     private double firstVariable;
     private double secondVariable;
-    private double result;
+    private String result;
     private String operation;
 
     public double getFirstVariable() {
@@ -42,11 +42,11 @@ public class Calculator {
         this.secondVariable = secondVariable;
     }
 
-    public double getResult() {
+    public String getResult() {
         return result;
     }
 
-    public void setResult(double result) {
+    public void setResult(String result) {
         this.result = result;
     }
 
@@ -73,67 +73,98 @@ public class Calculator {
         calculator.setVisible(true);
     }
 
+    public void calculation() {
+        switch (getOperation()) {
+            case "addition":
+                setResult(Double.toString(getFirstVariable() + getSecondVariable()));
+                break;
+            case "subtraction":
+                setResult(Double.toString(getFirstVariable() - getSecondVariable()));
+                break;
+            case "multiply":
+                setResult(Double.toString(getFirstVariable() * getSecondVariable()));
+                break;
+            case "division":
+                if (secondVariable != 0) {
+                    setResult(Double.toString(getFirstVariable() / getSecondVariable()));
+                } else {
+                    setResult("MATH ERROR");
+
+                }
+                break;
+        }
+        setFirstVariable(0.0);
+        setSecondVariable(0.0);
+    }
+
+    public void getInput(int i) {
+        if (!textField.getText().equals(getResult())) {
+            textField.setText(textField.getText() + i);
+        } else {
+            clearTextField();
+            textField.setText(textField.getText() + i);
+        }
+    }
+
     public Calculator() {
         button_0.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!textField.getText().equals("")) {
-                    textField.setText(textField.getText() + "0");
-                }
+                getInput(0);
             }
         });
         button_1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                textField.setText(textField.getText() + "1");
+                getInput(1);
             }
         });
         button_2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                textField.setText(textField.getText() + "2");
+                getInput(2);
             }
         });
         button_3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                textField.setText(textField.getText() + "3");
+                getInput(3);
             }
         });
         button_4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                textField.setText(textField.getText() + "4");
+                getInput(4);
             }
         });
         button_5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                textField.setText(textField.getText() + "5");
+                getInput(5);
             }
         });
         button_6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                textField.setText(textField.getText() + "6");
+                getInput(6);
             }
         });
         button_7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                textField.setText(textField.getText() + "7");
+                getInput(7);
             }
         });
         button_8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                textField.setText(textField.getText() + "8");
+                getInput(8);
             }
         });
         button_9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                textField.setText(textField.getText() + "9");
+                getInput(9);
             }
         });
         button_C.addActionListener(new ActionListener() {
@@ -148,44 +179,72 @@ public class Calculator {
         button_division.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setFirstVariable(Double.parseDouble(textField.getText()));
-                setOperation("division");
-                clearTextField();
+                if (!textField.getText().equals("MATH ERROR")) {
+                    setFirstVariable(Double.parseDouble(textField.getText()));
+                    setOperation("division");
+                    clearTextField();
+                } else {
+                    java.awt.Toolkit.getDefaultToolkit().beep();
+                }
             }
         });
         button_multiply.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setFirstVariable(Double.parseDouble(textField.getText()));
-                setOperation("multiply");
-                clearTextField();
+                if (!textField.getText().equals("MATH ERROR")) {
+                    setFirstVariable(Double.parseDouble(textField.getText()));
+                    setOperation("multiply");
+                    clearTextField();
+                } else {
+                    java.awt.Toolkit.getDefaultToolkit().beep();
+                }
             }
         });
         button_subtraction.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setFirstVariable(Double.parseDouble(textField.getText()));
-                setOperation("subtraction");
-                clearTextField();
+                if (!textField.getText().equals("MATH ERROR")) {
+                    setFirstVariable(Double.parseDouble(textField.getText()));
+                    setOperation("subtraction");
+                    clearTextField();
+                } else {
+                    java.awt.Toolkit.getDefaultToolkit().beep();
+                }
             }
         });
         button_addition.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setFirstVariable(Double.parseDouble(textField.getText()));
-                setOperation("addition");
-                clearTextField();
+                if (!textField.getText().equals("MATH ERROR")) {
+                    setFirstVariable(Double.parseDouble(textField.getText()));
+                    setOperation("addition");
+                    clearTextField();
+                } else {
+                    java.awt.Toolkit.getDefaultToolkit().beep();
+                }
             }
         });
-
-        calculatorPanel.addKeyListener(new KeyAdapter() {
+        button_result.addActionListener(new ActionListener() {
             @Override
-            public void keyTyped(KeyEvent e) {
-                super.keyTyped(e);
-                System.out.println(e);
+            public void actionPerformed(ActionEvent e) {
+                if (!textField.getText().equals("")) {
+                    setSecondVariable(Double.parseDouble(textField.getText()));
+                    calculation();
+                    textField.setText(getResult());
+                } else {
+                    java.awt.Toolkit.getDefaultToolkit().beep();
+                }
+            }
+        });
+        button_point.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (!textField.getText().contains(".")) {
+                    textField.setText(textField.getText() + ".");
+                } else {
+                    java.awt.Toolkit.getDefaultToolkit().beep();
+                }
             }
         });
     }
-
-
 }
